@@ -3,6 +3,8 @@ const path=require('path');
 const bodyParser = require('body-parser');
 const app= express();
 const mysql = require('mysql');
+const favicon = require('serve-favicon');
+app.use(favicon(__dirname + '/favicon.ico'));
 require("dotenv").config();
 /*var jsonParser=bodyParser.json();
 var urlencodedParser=bodyParser.urlencoded({extended:false});*/
