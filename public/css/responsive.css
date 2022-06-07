@@ -1,0 +1,311 @@
+/* ORDENADOR */
+@media screen and (max-width: 1366px) {
+  #creditosDiv {
+    top: 12%;
+  }
+
+  #imagen {
+    margin-top: 22%;
+  }
+
+  #instruccionesDiv {
+    top: 4%;
+  }
+
+  #pista {
+    font-size: 2em;
+  }
+
+  #puntuacionH2 {
+    font-size: 1em;
+  }
+
+  #resultado {
+    font-size: 1em;
+  }
+
+  .boton {
+    font-size: 1em;
+  }
+
+  .botonEmergente, .botonEmergenteRuleta{
+    font-size: 1.5em;
+  }
+
+  .intentosH2 {
+    font-size: 2em;
+  }
+
+  .tecla {
+    font-size: 1em;
+  }
+
+  .teclaDeshabilitada {
+    font-size: 1em;
+  }
+
+  .principal {
+    margin-top: 2%;
+  }
+  .botonEmergenteRuleta{
+    visibility: hidden;
+  }
+}
+
+/* MOVILES */
+@media screen and (max-width: 400px) {
+  body {
+    margin-right: 3%;
+  }
+
+  footer div {
+    padding: 10px;
+    text-align: center;
+  }
+
+  footer {
+    display: block;
+  }
+
+  #altavoz {
+    display: none;
+  }
+
+  #creditosDiv h1, #instruccionesDiv h1 {
+    font-size: 2em;
+  }
+
+  #creditosDiv, #instruccionesDiv,.container {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    top: 7%;
+    width: 90%;
+  }
+
+  #pista {
+    font-size: 1.5em;
+  }
+
+  #resultado {
+    font-size: 1.5em;
+  }
+
+  #solapaDiv {
+    position: fixed;
+  }
+#solapaDivRuleta{
+  position: fixed;
+}
+  #puntuacionH2 {
+    font-size: 1em;
+    margin-top: 5%;
+  }
+
+  .boton {
+    font-size: 1em;
+  }
+
+  .boton, .botonEmergente, .botonEmergenteRuleta {
+    padding: 13px 40px;
+  }
+
+  .imagenDiv {
+    display: none;
+  }
+
+  .juegoDiv {
+    margin-left: 4%;
+    margin-right: 3.5%;
+    width: auto;
+  }
+
+  .intentosH2 {
+    font-size: 1.5em;
+  }
+
+  .tecla, .teclaDeshabilitada {
+    width: 15%;
+  }
+  /*ruleta*/
+  /*.canvasDiv{
+   display: flex;
+   position: relative ;
+  left: 2em;
+  top: 25em;
+  
+ }
+  canvas {
+    width: 100%;
+    height: auto;
+    z-index: 500;
+    
+  }*/
+  .mostrar{
+    position: relative;
+    z-index: 20;
+  }
+  .contenedorBoton{
+    display: flex;
+   position: absolute ;
+   left: 6em;
+   top: 20em;
+  }
+  .botonEmergenteRuleta{
+    width:160px;
+    z-index: 20;
+    padding: 17px 20px;
+    visibility: visible;
+    
+    
+  }
+
+  #solapaDivRuleta {
+    visibility: visible;
+  }
+  .imagenDiv{
+    display: flex;
+   position: absolute ;
+  /* left: -30px;*/
+  top: 5em;
+  margin-left: auto;
+    margin-right: auto;
+  
+  }
+  canvas {
+    width:350px;
+    height: auto;
+    z-index: 20;
+    
+  }
+}
+
+
+@media screen and (max-width: 900px) {
+  body {
+    margin-right: 3%;
+  }
+
+  footer div {
+    padding: 10px;
+    text-align: center;
+  }
+
+  footer {
+    display: block;
+  }
+
+  #altavoz {
+    display: none;
+  }
+
+  #creditosDiv h1, #instruccionesDiv h1,#agregarFraseDiv h1{
+    font-size: 2em;
+  }
+
+  #creditosDiv, #instruccionesDiv, #agregarFraseDiv,.container {
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    top: 7%;
+    width: 90%;
+  }
+
+  #pista {
+    font-size: 1.5em;
+  }
+
+  #resultado {
+    font-size: 1.5em;
+  }
+
+  #solapaDiv {
+    position: fixed;
+  }
+#solapaDivRuleta{
+  position: fixed;
+}
+  #puntuacionH2 {
+    font-size: 1em;
+    margin-top: 5%;
+  }
+
+  .boton {
+    font-size: 1em;
+  }
+
+  .boton, .botonEmergente, .botonEmergenteRuleta {
+    padding: 13px 40px;
+  }
+
+  .imagenDiv {
+    display: none;
+  }
+
+  .juegoDiv {
+    margin-left: 4%;
+    margin-right: 3.5%;
+    width: auto;
+  }
+
+  .intentosH2 {
+    font-size: 1.5em;
+  }
+
+  .tecla, .teclaDeshabilitada {
+    width: 15%;
+  }
+  /*ruleta*/
+  /*.canvasDiv{
+   display: flex;
+   position: relative ;
+  left: 2em;
+  top: 25em;
+  
+ }
+  canvas {
+    width: 100%;
+    height: auto;
+    z-index: 500;
+    
+  }*/
+  .mostrar{
+    position: relative;
+    z-index: 20;
+  }
+  .contenedorBoton{
+    display: flex;
+   position: absolute ;
+   left: 6em;
+   top: 20em;
+  }
+  .botonEmergenteRuleta{
+    width:160px;
+    z-index: 20;
+    padding: 17px 20px;
+    visibility: visible;
+    
+    
+  }
+
+  #solapaDivRuleta {
+    visibility: visible;
+  }
+  .imagenDiv{
+    display: flex;
+   position: absolute ;
+  /* left: -30px;*/
+  top: 5em;
+  margin-left: auto;
+    margin-right: auto;
+  
+  }
+  canvas {
+    width:350px;
+    height: auto;
+    z-index: 20;
+    
+  }
+}

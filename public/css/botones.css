@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One|Gorditas:700|Knewave&display=swap');
+
+.boton, .botonEmergente, .botonEmergenteRuleta {
+  -webkit-text-stroke: 1px #000;
+  background: linear-gradient(to bottom, #b5a054 5%, #998746 100%);
+  border: 1px solid #615839;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px 0 #000;
+  color: #f0e892;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 2em;
+  padding: 17px 51px;
+  text-decoration: none;
+  text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  text-transform: uppercase;
+}
+
+.botonEmergente, .botonEmergenteRuleta {
+  margin-top: 3%;
+  margin-bottom: 3%;
+}
+
+.tecladoDiv {
+  margin-bottom: 4%;
+}
+
+.tecla, .teclaV{
+  -webkit-text-stroke: 1px #000;
+  background: linear-gradient(to bottom, #b5a054 5%, #998746 100%);
+  border: 1px outset #615839;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px 0 #000;
+  color: #f0e892;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 2em;
+  padding: 8px 17px;
+  margin: 0.5%;
+  text-decoration: none;
+  text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  text-transform: uppercase;
+  animation: teclas 1s;
+  width: 7%;
+}
+
+.teclaDeshabilitada {
+  -webkit-text-stroke: 1px #000;
+  background: linear-gradient(to bottom, #8a7c49 5%, #807038 100%);
+  border: 1px inset #615839;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px 0 #000;
+  color: #d4cc7c;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 2em;
+  padding: 8px 17px;
+  margin: 0.5%;
+  text-decoration: none;
+  text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  text-transform: uppercase;
+  width: 7%;
+}
+
+.boton:active, .tecla:active, .botonEmergente:active, .botonEmergenteRuleta:active {
+  position: relative;
+  top: 1px;
+}
+
+.boton:hover, .tecla:hover, .botonEmergente:hover, .botonEmergenteRuleta:hover {
+  background: linear-gradient(to bottom, #998744 65%, #b5a054 100%);
+}
+
+.botonGirar{
+  -webkit-text-stroke: 1px #000;
+  background: linear-gradient(to bottom, #b5a054 5%, #998746 100%);
+  border: 1px solid #615839;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px 0 #000;
+  color: #f0e892;
+  font-family: 'Alfa Slab One', cursive;
+  font-size: 2em;
+  padding: 17px 51px;
+  text-decoration: none;
+  text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  text-transform: uppercase;
+  height: auto;
+  position: top;
+}
+
+.botonEmergenteRuleta{
+  visibility: hidden;
+}
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> CREAR PARTIDA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/style_menu.css">
+    <link href="css/botones.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="cabecera">
+            <h1>CREAR PARTIDA</h1>
+        </div>
+        <form action="/insert" method="post">
+            <div class="cabecera">
+                <h2>PIN de partida:</h2>
+                <input type="hidden" id="pin" name="pin" readonly>
+                <h2 id="pinT" name="pinT"></h2>
+            </div>
+
+            <div class="boton-menu">
+                <input class="frase-ingreso" type="text" id="frase" name="frase" placeholder="Ingrese una frase">
+            </div>
+
+            <div class="boton-menu">
+                <input class="boton" type="submit" id="btnCrearPartida" value="Crear Partida">
+            </div>
+        </form>
+
+        <a href="menu2.html"><input class="boton" type="button" value="Cancelar"></a>
+
+    </div>
+    <script>
+            const banco = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            let aleatoria = "";
+            for (let i = 0; i < 6; i++) {
+                // Lee más sobre la elección del índice aleatorio en:
+                // https://parzibyte.me/blog/2021/11/30/elemento-aleatorio-arreglo-javascript/
+            aleatoria += banco.charAt(Math.floor(Math.random() * banco.length));
+            }
+            console.log(aleatoria);
+            document.getElementById("pinT").innerHTML = aleatoria;
+            document.getElementById("pin").value = aleatoria;
+        </script>
+</body>
+
+
+
+</html>

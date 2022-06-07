@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es-Es" dir="ltr">
+  <head>
+    <title>juego</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/emergentes.css" rel="stylesheet" type="text/css">
+    <link href="css/botones.css" rel="stylesheet" type="text/css">
+    <link href="css/animaciones.css" rel="stylesheet" type="text/css">
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+  </head>
+  <body>
+    <div class="principal">
+      <img src="img/altavozOff.png" alt="altavoz" id="altavoz" onclick="controlMusicaFondo()">
+      <div id="solapaDivRuleta"></div>
+      <div class="imagenDiv">
+        <img src="img/svg/horca.svg" alt="muñeco" id="imagen" hidden>
+        <canvas id="canvas" width="500" height="500"></canvas>
+        <div class="contenedorBoton">
+          <button type="button" id="cerrarRuleta"  class="botonEmergenteRuleta" onclick="cerrarruleta();" >cerrar</button>
+          
+        </div>
+        
+      </div>
+      <div class="mostrar">
+           <input type="button" class="botonGirar" onclick="abrirRuleta();" value="girar" id='spin' />
+      </div>
+      <div class="juegoDiv">
+        <h1 id="pista"></h1>
+        
+          
+        
+       
+        <h2 id="puntuacionH2J1"></h2>
+        <h2 id="puntuacionH2J2"></h2>
+        <h2 id="puntuacionH2J3"></h2>
+       <div id="resultado"><pre></pre></div>
+        
+        <div class="tecladoDiv">
+          <button type="button" class="tecla" id="teclaq" value="Q" onclick="comprobarTecla('q');">Q</button>
+          <button type="button" class="tecla" id="teclaw" value="W" onclick="comprobarTecla('w');">W</button>
+          
+          <button type="button" class="tecla" id="teclar" value="R" onclick="comprobarTecla('r');">R</button>
+          <button type="button" class="tecla" id="teclat" value="T" onclick="comprobarTecla('t');">T</button>
+          <button type="button" class="tecla" id="teclay" value="Y" onclick="comprobarTecla('y');">Y</button>
+          <button type="button" class="tecla" id="teclap" value="P" onclick="comprobarTecla('p');">P</button><br>   
+          <button type="button" class="tecla" id="teclas" value="S" onclick="comprobarTecla('s');">S</button>
+          <button type="button" class="tecla" id="teclad" value="D" onclick="comprobarTecla('d');">D</button>
+          <button type="button" class="tecla" id="teclaf" value="F" onclick="comprobarTecla('f');">F</button>
+          <button type="button" class="tecla" id="teclag" value="G" onclick="comprobarTecla('g');">G</button>
+          <button type="button" class="tecla" id="teclah" value="H" onclick="comprobarTecla('h');">H</button>
+          <button type="button" class="tecla" id="teclaj" value="J" onclick="comprobarTecla('j');">J</button>
+          <button type="button" class="tecla" id="teclak" value="K" onclick="comprobarTecla('k');">K</button>
+          <button type="button" class="tecla" id="teclal" value="L" onclick="comprobarTecla('l');">L</button>
+          <button type="button" class="tecla" id="teclañ" value="Ñ" onclick="comprobarTecla('ñ');">Ñ</button><br>
+          <button type="button" class="tecla" id="teclaz" value="Z" onclick="comprobarTecla('z');">Z</button>
+          <button type="button" class="tecla" id="teclax" value="X" onclick="comprobarTecla('x');">X</button>
+          <button type="button" class="tecla" id="teclac" value="C" onclick="comprobarTecla('c');">C</button>
+          <button type="button" class="tecla" id="teclav" value="V" onclick="comprobarTecla('v');">V</button>
+          <button type="button" class="tecla" id="teclab" value="B" onclick="comprobarTecla('b');">B</button>
+          <button type="button" class="tecla" id="teclan" value="N" onclick="comprobarTecla('n');">N</button>
+          <button type="button" class="tecla" id="teclam" value="M" onclick="comprobarTecla('m');">M</button>
+        </div>
+      </div>
+      <div> 
+        <button class="boton"  onclick="abrirResolverFrase();">Resolver Frase</button>
+      </div>
+    </div>
+    <div id="solapaDiv"></div>
+    <div id="creditosDiv">
+      <h1>MENU</h1>
+
+      <div>
+        <button class="boton" onclick="reiniciarPartida();">Iniciar partida</button>
+      </div>
+
+      
+      <button class="botonEmergente" onclick="cerrarCreditos();">Cerrar</button>
+    </div>
+  
+
+
+
+    <div id="agregarFraseDiv">
+        <h1>AGREGAR FRASE</h1>
+        <input type="text" id="frase" > 
+        <input  class="boton" type="button" id="btnAgregarFrase" value="Agregar" onclick="agregarFrase();">
+        <input  class="boton" type="button" id="btnMostrarFrases" value="Mostrar" onclick="mostrarFrasesCargadas();">
+
+        <div id="result">
+
+        </div>
+      
+      <button class="botonEmergente" onclick="cerrarAgregarFrase();">Cerrar</button>
+    </div>
+    
+    <div id="resolverFraseDiv">
+      <h1>RESOLVER:</h1>
+      <input type="text" id="fraseAdivinada" >
+      <input  class="boton" type="button" id="btnResolverFrase" value="resolver" onclick="resolverFrase();">
+      <button class="botonEmergente" onclick="cerrarResolverFrase();">cancelar</button>
+    </div>
+
+    
+    <div id="comprarVocalDiv">
+      <h1>Elija su vocal</h1>
+      <button type="button" class="teclaV" id="teclaa" value="A" onclick="comprobarTecla('a');">A</button>
+      <button type="button" class="teclaV" id="teclae" value="E" onclick="comprobarTecla('e');">E</button>
+      <button type="button" class="teclaV" id="teclai" value="I" onclick="comprobarTecla('i');">I</button>
+      <button type="button" class="teclaV" id="teclao" value="O" onclick="comprobarTecla('o');">O</button>
+      <button type="button" class="teclaV" id="teclau" value="U" onclick="comprobarTecla('u');">U</button>
+       
+      <button class="botonEmergente" onclick="cerrarComprarVocal();">Cerrar</button>
+
+    </div>
+      
+    <div id="ventanaEmergenteDiv">
+      
+    
+    </div>
+
+
+
+
+
+
+
+    <footer>
+      
+      
+      <div>
+
+     
+         <a href="index.html">
+           <button  class="boton">Volver al Menu</button>
+       </a> 
+       
+      </div>
+
+      <div>
+        <button class="boton" id="BotonReiniciar" onclick="reiniciarPartida();">Reiniciar</button>
+      </div>
+
+     <div>   <button class="boton" id="comprarVocal" onclick="abrirComprarVocal();">Comprar vocal</button></div>
+     
+    </footer>
+   
+    <script type="text/javascript" src="js/emergentes.js"></script>
+    <script src="/socket.io/socket.io.js" charset="utf-8"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    
+   
+  </body>
+</html>
