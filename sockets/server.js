@@ -3,14 +3,13 @@ const path=require('path');
 const bodyParser = require('body-parser');
 const app= express();
 const mysql = require('mysql');
-const favicon = require('serve-favicon');
-app.use(favicon(__dirname + '/favicon.ico'));
+
 require("dotenv").config();
 /*var jsonParser=bodyParser.json();
 var urlencodedParser=bodyParser.urlencoded({extended:false});*/
 app.use(bodyParser.urlencoded({extended: false}));
 app.set('view engine','ejs')
-app.set("views", __dirname + "/public");
+
 //conexion mysql
 const connection = mysql.createConnection({
    host:"localhost",
@@ -90,6 +89,8 @@ io.on('connect',function(socket){
       console.log("lista de jugadores "+ listaJugadores.length);
       io.emit("listaJugadores",{lista:listaJugadores});
       io.emit("pasoFrases",datosPartida.Frases);
+    
+
       console.log(" ");
       console.log("USUARIOS CONECTADOS");
       for( var i =0; i < listaJugadores.length ; i++){
@@ -122,14 +123,14 @@ io.on('connect',function(socket){
       io.emit("comenzoPartida",dato);
       
    });
-  
+ 
 
    //la palabra a mostrar
    socket.on("actualizoPantalla", function(datos){
       console.log("la palabra a adivinar es"+ datos.palabraAdivinar);
       io.emit("actualizoPantalla", {palabraMostrar:datos.palabraMostrar, palabraAdivinar:datos.palabraAdivinar,turno:datos.turno,puntuacionJ1: datos.puntuacionJ1,puntuacionJ2: datos.puntuacionJ2,puntuacionJ3: datos.puntuacionJ3});
    });
-   
+
 
    //mando la frase de la ventana
    socket.on("fraseVentana", function(dato){

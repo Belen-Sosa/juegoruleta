@@ -251,6 +251,9 @@ function resolverFrase(){
   //si la frase que se ingreso es igual a la frase a adivinar ya la mostramos por pantalla
   if (fraseAdivinada == palabraAdivinarString){
     palabraMostrar=fraseAdivinada;
+    puntuacion= 500;
+    banderaPuntuacion="";
+    actualizarPuntuacion(puntuacion);
    
   };
 
@@ -662,11 +665,12 @@ function spin() {
   spinTime = 0;
   spinTimeTotal = Math.random() * 3 + 4 * 1000;
  // socket giroRuleta
- socket.emit("rotateWhel",{spinAngleStart:spinAngleStart,spinTime:spinTime,spinTimeTotal:spinTimeTotal});
+  socket.emit("rotateWhel",{spinAngleStart:spinAngleStart,spinTime:spinTime,spinTimeTotal:spinTimeTotal});
  
    
   document.getElementById("spin").disabled = true;
   document.getElementById("comprarVocal").disabled = true;
+  
 
 }
 socket.on("rotateWhel",function(datos){
@@ -818,7 +822,7 @@ function mostrarFraseVentana(){
     cerrarCreditos();
     bloquearTodasTeclas();
     document.getElementById("spin").disabled = true;
-    
+    document.getElementById("resolverFrase").disabled = true;
    
  });
  
@@ -855,7 +859,8 @@ socket.on("habilitar", function(dato){
     alert("es tu turno");
     console.log("tu turno");
     document.getElementById("spin").disabled = false;
-
+    document.getElementById("resolverFrase").disabled = false;
+    
 
    
   
